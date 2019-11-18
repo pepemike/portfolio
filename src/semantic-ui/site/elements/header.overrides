@@ -1,0 +1,60 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+@{mainHeader} {
+    @media @smallMobile {
+        font-size: 2.1em;
+    }
+}
+
+@{sectionTitle} {
+    padding-bottom: 2rem;
+
+    @media @tablet {
+        .projects & {
+            padding-bottom: 4rem;
+        }
+    }
+
+    @media @largeMonitor {
+        padding-bottom: 4rem;    
+
+        .projects & {
+            padding-bottom: 6rem;
+        }
+    }
+
+    @media @extraWideScreen {
+        padding-bottom: 10rem;
+    }
+}
+
+@{sectionSubHeader} {
+    color: @defaultTextColor;
+}
+
+.about {
+    @{sectionTitle}, @{sectionSubHeader} {
+        color: @aboutTextColor;
+    }
+}
+
+
+@media @smallMobile {
+    @largeFontSize: 2em;
+}
+
+
+@{hugeHeader} {
+    //default 3em, s. header variables
+
+    @media @wideScreen {
+        font-size: 4em;
+    }
+
+    
+    @media @extraWideScreen {
+         font-size: 5em;
+    }
+} 

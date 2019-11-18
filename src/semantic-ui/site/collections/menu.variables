@@ -1,0 +1,22 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+//menu bg color menu normal state
+@secondaryBackground: @menuBgColor;
+
+//hide menu bottom border
+@secondaryPointingBorderColor: transparent;
+
+//hide menu item bottom border
+@secondaryPointingActiveBorderColor: transparent;
+@secondaryPointingInvertedActiveBorderColor: transparent;
+
+/*--------------------------------------
+**My variables
+---------------------------------------*/
+
+
+@menu: .ui.secondary.menu;
+@invertedMenu: .ui.secondary.inverted.menu;
+@menuContainer: .ui.menu > .container;
+@menuItem: .ui.secondary.inverted.pointing.menu .item;

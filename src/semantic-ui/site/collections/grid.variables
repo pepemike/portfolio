@@ -1,0 +1,12 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@section: #root > .ui.grid > .row > .column;
+@wrapper: .ui.grid.wrapper;
+@homeWrapper: .ui.grid.home-wrapper;
+@projectsWrapper: .ui.grid.projects-wrapper;
+@aboutWrapper: .ui.grid.about-wrapper;
+@formWrapper: .ui.grid.contact-wrapper;
+@summaryContainer: .ui.grid .column.summary-container;
+@imageWrapper: .ui.grid [class*="right floated"].column;
+@footerWrapper: .ui.grid > .row.footer-wrapper;

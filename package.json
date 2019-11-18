@@ -1,0 +1,49 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-cookie-consent": "^2.5.0",
+    "react-div-100vh": "^0.3.4",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-scrollable-anchor": "^0.6.1",
+    "react-scrollchor": "^6.0.0",
+    "semantic-ui-react": "^0.87.3",
+    "styled-components": "^4.3.2",
+    "styled-icons": "^8.4.0",
+    "underscore": "^1.9.1"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "postinstall": "mv ./node_modules/semantic-ui-less/theme.config.example ./node_modules/semantic-ui-less/theme.config"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.2.4",
+    "craco-less": "^1.9.0",
+    "semantic-ui-less": "^2.4.1",
+    "concurrently": "^4.1.0",
+    "json-server": "^0.14.0"
+  }
+}

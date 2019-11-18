@@ -1,0 +1,10 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+.ui.horizontal.list > .item > .icon, .ui.horizontal.list > .item > .icon + .content {
+    display: table-cell;
+}
+
+@{firstListItem} {
+    margin-left: 1em !important;
+}

@@ -1,0 +1,9 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@iconBars: .icon.bars;
+@iconUndo: .icon.undo;
+@iconGithub: .icon.github.circular.inverted;
+@iconExternal: .icon.external.alternate;
+@iconWP: .inverted.circular.icon.wordpress;

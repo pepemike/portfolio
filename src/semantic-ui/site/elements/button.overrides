@@ -1,0 +1,51 @@
+/*******************************
+         Site Overrides
+*******************************/
+//scroll to top button
+@{scrollButton} {
+    background: none;
+    transition: all 1s ease-in;
+
+    &:hover {
+        transform: translateY(-.8em);
+    }
+}
+
+@{homeButton} {
+    transition: transform 1.5s;
+    box-shadow: none !important;
+
+    &:hover, &:focus, &.active {
+        background-color: rgb(121, 105, 255);
+        color: #fff;
+        box-shadow: none !important;
+        transform: scale(1.1);
+    }
+
+    @media @tablet {   
+        padding-bottom: 2em;
+    }
+
+    @media @computer {
+        padding-bottom: 2.5em;
+    }
+
+    @media @wideScreen {
+        padding-bottom: 4em;
+    }
+}
+
+@{contactButton} {
+    background: @contactBtnColor;
+    box-shadow: 0px 0px 0px 2px #7969FF inset !important;
+    color: @contactBgColor;
+    transition: all .5s ease-in;
+
+    &:hover, &:focus, &.active {
+      opacity: .8;
+    }
+}
+
+a.back {
+    color: #6435C9;
+}

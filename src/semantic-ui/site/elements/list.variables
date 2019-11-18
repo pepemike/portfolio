@@ -1,0 +1,5 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@itemVerticalPadding: .5em;
+@firstListItem: .ui.horizontal.list:not(.celled) > .item:first-child;

@@ -1,0 +1,38 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+@{iconBars}, @{iconUndo} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: @togglerColor;
+    z-index: 102;
+}
+
+@{iconUndo} {
+    //prevent scrolling
+    position: fixed;
+}
+
+@{iconGithub}, @{iconWP} {
+    background: @projectsIconColor !important;
+
+    &:hover, &:focus, &.active {
+        background: @projectsIconHoverColor !important;
+    }
+}
+
+@{iconExternal}{
+    color: @projectsIconColor;
+    background: #fff;
+    box-shadow: @projectsIconColor 0em 0em 0em 0.1em inset;
+
+    &:hover, &:focus, &.active {
+        color:  @projectsIconHoverColor;
+    }
+}
+
+@{iconGithub}, @{iconWP}, @{iconExternal} {
+    margin-right: .3em;
+}

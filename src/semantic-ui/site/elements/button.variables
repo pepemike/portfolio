@@ -1,0 +1,12 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@button: .ui.button;
+
+@invertedButton: .inverted@button;
+
+@homeButton: .home @invertedButton;
+
+@contactButton: .contact @button;
+
+@scrollButton: .scroll@button;

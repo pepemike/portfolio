@@ -1,0 +1,5 @@
+
+AuthType Basic
+AuthName "sorry, it's under construction"
+AuthUserFile /www/htdocs/w0141809/alex-codes.com/.htpasswd
+Require valid-user

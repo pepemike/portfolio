@@ -1,0 +1,38 @@
+/*******************************
+     User Global Variables
+*******************************/
+/*-------------------
+       Fonts
+--------------------*/
+@fontName           : 'Montserrat';
+@headerFontName     : 'McLaren';
+@headerFont         : @headerFontName, cursive;
+@googleFontRequest  : 'Montserrat:300,400,600|Jacques+Francois+Shadow|Pompiere|McLaren';
+
+/*---------------------
+** COLORS
+-----------------------*/
+@menuBgColor: #FFFFFF;
+@homeBgColor: #7969FF;
+@togglerColor: #FFFFFF;
+@projectsIconColor: #FFC56B;
+@projectsIconHoverColor: #FFCD7E;
+@aboutTextColor: #FFFFFF;
+@inputBg: #FFFEE6;
+@contactBgColor: #FFF87E;
+@contactBtnColor: #7969FF;
+@defaultTextColor: rgba(0, 0, 0, 0.87);
+
+/*----------------------
+** MEDIA QUERIES
+-----------------------*/
+@smallMobile: ~"only screen and (max-width: 374px)";
+@tablet: ~"only screen and (min-width: 768px)";
+@tabletOnly: ~"only screen and (min-width: 768px) and (max-width: 991px)";
+@stackableOnly: ~"only screen and (max-width: 991px)";
+@computer: ~"only screen and (min-width: 992px)";
+@largeMonitor: ~"only screen and (min-width: 1200px)";
+@extraLargeMonitor: ~"only screen and (min-width: 1600px)";
+@wideScreen: ~"only screen and (min-width: 1920px)";
+@extraWideScreen: ~"only screen and (min-width: 2560px)";
+@landscape: ~"only screen and (orientation: landscape) and (max-width: 991px)";

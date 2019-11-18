@@ -1,0 +1,4 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@tab: .ui.tab.segment.active;

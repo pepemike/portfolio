@@ -1,0 +1,18 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@hugeFontSize   : 3em;//homepage header >= computer & section header >= tablet
+
+//homepage header >= computer & section header >= tablet
+@hugeHeader: .ui.huge.header;
+
+@largeFontSize  : 2.8em; //homepage header <= mobile and tablet & section header <= mobile
+
+@mainHeader: .home h2.ui.header;
+
+@sectionTitle: .ui.header.section-title;
+
+@sectionSubHeader: .ui.header .sub.header;
+
+@projectTitle: .ui.header.project-title;

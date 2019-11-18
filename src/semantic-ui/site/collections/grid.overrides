@@ -1,0 +1,62 @@
+/*******************************
+         Site Overrides
+*******************************/
+//override column styles
+@{section} {
+
+    @media @tabletOnly {
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@{projectsWrapper} {
+    
+    @media @tablet {
+        padding: 0 10%;
+    }
+
+    @media @largeMonitor {
+        padding: 0 15%;
+    }
+}
+
+@{aboutWrapper} {
+    color: @aboutTextColor;
+}
+
+@{wrapper} {    
+    @media @tablet {   
+        align-content: flex-start;
+    }
+}
+
+@{homeWrapper} {
+     @media @tablet {   
+        align-content: normal;
+    }
+}
+
+@{summaryContainer} {
+
+    @media @tablet {  
+        padding-left: 1.5rem;
+    }
+
+    @media @largeMonitor {
+        padding-left: 2.5rem;
+    }
+
+    @media @extraLargeMonitor {
+        padding-left: 4rem;
+    }
+} 
+
+@{imageWrapper} {
+    @media @tablet {   
+        padding-right: 0;
+    }
+}
+@{footerWrapper} {
+    padding-bottom: 3rem;
+}

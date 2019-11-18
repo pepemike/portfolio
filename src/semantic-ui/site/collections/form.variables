@@ -1,0 +1,6 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@inputBackground: @inputBg;
+@requiredContent: '';
+@inputFont: 'Montserrat';
