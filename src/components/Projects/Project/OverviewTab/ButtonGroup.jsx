@@ -21,7 +21,7 @@ const ButtonGroup = ({ mobile, tablet, computer, largeScreen, github, live, them
 			<Button stackable={stackable} breakpoint={breakpoint} name="github" inverted msg="View code" url={github} />
 			<Button stackable={stackable} breakpoint={breakpoint} name="external alternate" msg="Visit site" url={live} />
 		{themeDirectory &&
-			<Button stackable={stackable} breakpoint={breakpoint} name="wordpress" inverted msg="Theme directory" url={themeDirectory} />
+			<Button stackable={stackable} breakpoint={breakpoint} name="wordpress" inverted msg="WP directory" url={themeDirectory} />
 		}
 		</Grid.Column>
 	);

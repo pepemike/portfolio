@@ -6,6 +6,7 @@ export const ButtonGroup = styled.div.attrs(props => ({
 }))`
 	display: flex;
 	justify-content: center;
+	margin: 2em 0;
 `;
 
 export const ConsentButton = styled(Button).attrs(props => ({
