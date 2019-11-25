@@ -1,10 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
 	<Grid.Row className="footer-wrapper">
+		<Grid.Column textAlign="right" width="16">
+			<LinkWrapper>
+				<ExternalLink href="mailto:info@alex-codes.com"><Icon name="mail" /> info@alex-codes.com</ExternalLink>
+			</LinkWrapper>
+		</Grid.Column>
 		<Grid.Column textAlign="right" width="16">
 			<LinkWrapper>
 				Icons provided by <ExternalLink href="https://icons8.com" target="_blank">Icons8</ExternalLink> and <ExternalLink href="https://worldvectorlogo.com" target="_blank">Worldvectorlogo</ExternalLink>
