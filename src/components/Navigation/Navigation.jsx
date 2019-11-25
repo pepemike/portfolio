@@ -43,14 +43,14 @@ const Navigation = props => {
 	};
 
 	useEffect( () => {	
-		//TODO:
-		//window.addEventListener('orientationchange', () => {setHorizontalMenuVisible(false)});
+		let timer;
 		setTimeout(
 			() => {
-				setHorizontalMenuVisible(true);
-			}, 2000
+				timer = setHorizontalMenuVisible(true);
+			}, 3000
 		);
 		setBarsVisible(true);
+		return () => clearTimeout(timer);
 	},[]);
 
 	useEffect( () => {

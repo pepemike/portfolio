@@ -22,6 +22,17 @@ export const fadeout = keyframes`
 	}
 `;
 
+export const fadedown = keyframes`
+	from {
+		opacity: 0;
+		top: -3em;
+	}
+	to {
+		opacity: 1;
+		top: 0;
+	}
+`;
+
 export const slideup = keyframes`
 	from {
 		bottom: -10em;
