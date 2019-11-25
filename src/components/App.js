@@ -62,18 +62,16 @@ const App = props => {
     } 
   }, [loaderVisible]); 
 
-  //TODO: check how this works on a real device
   const handleOrientationChange = () => {
     setLoaderToVisible(true);
-    const timer = setTimeout(() => setLoaderToVisible(false), 1000);
+    const timer = setTimeout(() => setLoaderToVisible(false), 500);
     clearTimeout(timer);
   }
 
   const setContext = () => {
-    const screenWidth = window.innerWidth;
-    
+    const screenWidth = document.documentElement.clientWidth;
     setStackable(screenWidth < 992);
-  
+
     switch (true) {
       case screenWidth < 375: 
       setBreakpoint('mobile-small');    
@@ -126,5 +124,3 @@ const App = props => {
 };
 
 export default App;
-
-//TODO:google analytics
