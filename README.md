@@ -1,75 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portfolio Website
 
-## Available Scripts
+A responsive SPA built with React, using [Semantic UI React](https://react.semantic-ui.com/) and [styled-components](https://www.styled-components.com/). It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). All the custom components are written as functional components, the state and side effects are managed with React Hooks. 
 
-In the project directory, you can run:
+It has a fully functional anchor menu which would not only allow visitors to access different sections of the website by clicking menu items but would also listen to the scroll event.
 
-### `npm start`
+The connection to the backend is provided via the fake REST API JSON Server deployed to Heroku. Requests to the server are performed using Fetch API.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+View the running app [here](https://alex-codes.com)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- The navigation is automatically updated as the page is scrolled, indicating which menu item is currently active. So the navigation and the section in view are always in sync.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- If a menu item is clicked, the page is smoothly scrolled to the corresponding section.
 
-### `npm run build`
+- The layout is fully responsive.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- On smaller screens the menu is hidden and can be toggled by clicking a button. When set to visible, it is stacked vertically and takes up the whole screen.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- On larger screens the menu is fixed to the top of the page. Its appearance changes when you start scrolling the page down.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Credits:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## Credits
+Menu based on [https://medium.com/the-well-of/smooth-scrolling-anchor-menu-in-reactjs-175030d0bce2](https://medium.com/the-well-of/smooth-scrolling-anchor-menu-in-reactjs-175030d0bce2)
 
 ### Images:
+
 Photo https://unsplash.com/photos/ZMraoOybTLQ by [Artem Sapegin](https://unsplash.com/@sapegin) on [unsplash](https://unspash.com)
 
 Most icons provided by [Icons8](https://icons8.com)
@@ -78,4 +34,8 @@ less, semantic ui, react router icons provided by [Worldvectorlogo](https://worl
 
 styled_components.png from [styled-components.com](https://www.styled-components.com/)
 
-# portfolio-dev
+### Copyright © 2019 alex-codes
+
+### License 
+
+[GNU AGPLv3](/LICENSE)
