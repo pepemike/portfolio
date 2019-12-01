@@ -9,6 +9,7 @@ const CookieConsentWrapper = styled.div`
 	opacity: 0;
 	animation: ${slideup} 2s ease-in 4s forwards;
 	font-size: 1.3em;
+	text-align: center;
 `;
 
 export default CookieConsentWrapper;
