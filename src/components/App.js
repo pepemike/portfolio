@@ -33,11 +33,9 @@ const App = props => {
   useEffect( () => {
     setContext();
     window.addEventListener('resize', setContext);
-    window.addEventListener('orientationchange', handleOrientationChange);
     
     return () => {
       window.removeEventListener('resize', setContext);
-      window.removeEventListener('orientationchange', handleOrientationChange);
     }
   }, []);
 
@@ -61,12 +59,6 @@ const App = props => {
       return () => clearTimeout(timer);
     } 
   }, [loaderVisible]); 
-
-  const handleOrientationChange = () => {
-    setLoaderToVisible(true);
-    const timer = setTimeout(() => setLoaderToVisible(false), 500);
-    clearTimeout(timer);
-  }
 
   const setContext = () => {
     const screenWidth = document.documentElement.clientWidth;
