@@ -17,7 +17,7 @@ const Header = props => {
 				<br/>					
 				<StyledSpan margin="1">I am Alexandra,</StyledSpan>
 				<br/>
-				<StyledSpan margin="2">Front-end </StyledSpan>
+				<StyledSpan margin="2">Frontend </StyledSpan>
 				{stackable && <br />}
 				<StyledSpan textColor="FFAA25" margin="3">Web Developer</StyledSpan>
 			</SURHeader>
