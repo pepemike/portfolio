@@ -3,7 +3,7 @@ import { ViewportContext } from '../../../Common/Context';
 import { Grid, Image, Header } from 'semantic-ui-react';
 import ButtonGroup from './ButtonGroup';
 
-const Screenshot = ({project, mobile, tablet, computer}) => {
+const Screenshot = ({ project, mobile, tablet, computer }) => {
 	const { stackable } = useContext(ViewportContext);
 	const { header, imgName, github, live, themeDirectory } = project;
 	const src = require(`../../../../images/${imgName}`);
@@ -18,7 +18,7 @@ const Screenshot = ({project, mobile, tablet, computer}) => {
 				src={src}
 				alt={alt}
 				as="a"
-				href="#"
+				href={live}
 				target="_blank" 
 				style={{boxShadow: '0.1em 0.1em 1.5em #bfbfbf'}}
 		/>
