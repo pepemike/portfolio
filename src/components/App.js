@@ -103,7 +103,9 @@ const App = props => {
           <Navigation {...naviProps} />
           <MainContainer {...mainProps} />
           <Scrollbutton activeItem={activeItem} setActiveItem={setActiveItem} />
-          <CookieConsentBar />
+          { dataLoaded && 
+            <CookieConsentBar /> 
+          }
         </Route>
         <Route path="/privacypolicy">
           <PrivacyPolicy setMenuItemClicked={setMenuItemClicked} setActiveItem={setActiveItem} />

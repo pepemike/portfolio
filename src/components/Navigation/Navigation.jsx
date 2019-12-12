@@ -43,15 +43,17 @@ const Navigation = props => {
 	};
 
 	useEffect( () => {	
+		if (!dataLoaded) return;
+
 		let timer;
 		setTimeout(
 			() => {
 				timer = setHorizontalMenuVisible(true);
-			}, 3000
+			}, 1500
 		);
 		setBarsVisible(true);
 		return () => clearTimeout(timer);
-	},[]);
+	},[dataLoaded]);
 
 	useEffect( () => {
 		if (dataLoaded) {
