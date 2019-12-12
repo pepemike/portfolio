@@ -21,7 +21,7 @@ const OverviewTab = ({ stackable, project }) => {
 			}				
 				<Screenshot 
 					mobile="16" tablet="12" computer="5"  
-					project={project}
+					project={project} live={live}
 				/>
 				
 				<Summary 
