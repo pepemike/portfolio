@@ -6,7 +6,7 @@ import MenuItem from './MenuItem';
 
 const NavMenu = props => {
 	const { stackable } = useContext(ViewportContext);
-	const { items, activeItem, setActiveItem, setMenuItemClicked, toggleMenu, invertedBg, className, animation, duration = 300, visible } = props;
+	const { items, activeItem, setMenuItemClicked, toggleMenu, invertedBg, className, animation, duration = 300, visible } = props;
 
 	const [itemVisible, setItemVisible] = useReducer(
 		(state, newState) => ({...state, ...newState}),
@@ -57,7 +57,6 @@ const NavMenu = props => {
 							active={activeItem === item}
 							animation={stackable? 'fly right' : null}
 							toggleMenu={toggleMenu}
-							setActiveItem={setActiveItem}
 							setClicked={setMenuItemClicked}
 						/>
 					)
