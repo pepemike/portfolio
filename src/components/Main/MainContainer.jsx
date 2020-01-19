@@ -4,7 +4,7 @@ import * as _ from 'underscore';
 
 const MainContainer = props => {
 	const { setActiveItem, setInvertedBg, dataLoaded } = props;
-	const [ sections, setSections ] = useState({});
+	const [ sections, setSections ] = useState([]);
 
 	useEffect(
 		() => {
@@ -12,13 +12,14 @@ const MainContainer = props => {
 			fetch('https://portfolio-json-server.herokuapp.com/sections/', {signal: abortController.signal})
 				.then(response => response.json())
 				.then(items => {
-						let sections = [...items];
-						sections.forEach(
-							item => {								
-								item.position = null;
-							}
-						)
-						setSections(sections);
+					//items: objects {name: ..., header: ..., subheader: ..., icon: ...}
+					let sections = [...items];
+					sections.forEach(
+						item => {								
+							item.position = null;
+						}
+					)
+					setSections(sections);
 				})
 				.catch(err => console.log(err)); 
 				return () => abortController.abort();
