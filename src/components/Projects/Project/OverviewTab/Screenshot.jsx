@@ -4,9 +4,9 @@ import { Grid, Image, Header } from 'semantic-ui-react';
 import ButtonGroup from './ButtonGroup';
 
 const Screenshot = ({ project, mobile, tablet, computer }) => {
-	const { stackable } = useContext(ViewportContext);
+	const { stackable, imgExtension } = useContext(ViewportContext);
 	const { header, imgName, github, live, themeDirectory } = project;
-	const src = require(`../../../../images/${imgName}`);
+	const src = require(`../../../../images/${imgName}.${imgExtension}`);
 	const alt = imgName.match(/[\w]+/)[0];
 	return (
 		<Grid.Column mobile={mobile} tablet={tablet} computer={computer} verticalAlign="top">
