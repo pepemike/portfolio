@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useEffect, useContext } from 'react';
+import React, { Fragment, useState, useEffect, useContext } from 'react';
 import { ViewportContext } from '../Common/Context';
 import Menu from './Menu';
 import { Responsive } from 'semantic-ui-react';
