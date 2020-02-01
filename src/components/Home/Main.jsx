@@ -24,11 +24,9 @@ const Main = ({ headerVisible, setMenuItemClicked, data, setImgLoaded }) => {
 
 	useEffect(
 		() => {
-			if (data.length === 0) return;
-			const [{imgName}] = data;
-			const img = require(`../../images/${imgName}.jpg`); 
+			const img = require(`../../images/header_img.jpg`); 
 			setImgSrc(img);			
-		}, [data]
+		}, []
 	);
 
 	const props = {
