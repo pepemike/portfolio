@@ -5,7 +5,7 @@ import Button from './Button';
 import Header from './Header';
 import Image from './Image';
 
-const Main = ({ headerVisible, setMenuItemClicked, data}) => {
+const Main = ({ headerVisible, setMenuItemClicked, data, setImgLoaded }) => {
 	const [imgSrc, setImgSrc] = useState('');
 	const [arrowMoving, setArrowMoving] = useState(true);
 	const { stackable, breakpoint } = useContext(ViewportContext);
@@ -50,7 +50,7 @@ const Main = ({ headerVisible, setMenuItemClicked, data}) => {
 				
 			<Header {...props} />							
 				
-			<Image {...props} src={imgSrc} />
+			<Image {...props} setImgLoaded={setImgLoaded} src={imgSrc} />
 					
 			<Button {...buttonProps} />	
 		</Fragment>		

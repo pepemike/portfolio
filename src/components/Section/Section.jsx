@@ -16,6 +16,7 @@ const Section = props => {
 		icon = '',
 		iconSize = null,
 		setSectionLoaded,
+		setImgLoaded,
 		setMenuItemClicked,
 		headerVisible
 	} = props;
@@ -65,6 +66,7 @@ const Section = props => {
 				breakpoint={breakpoint}
 				headerVisible={headerVisible}
 				setMenuItemClicked={setMenuItemClicked}
+				setImgLoaded={setImgLoaded}
 			/>
 		}
 		</Grid>
