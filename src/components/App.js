@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useEffect, useReducer, lazy, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Dimmer, Loader } from 'semantic-ui-react';
 import Navigation from './Navigation/Navigation';
 import MainContainer from './Main/MainContainer';
+import { supportsWebp } from './Common/SupportsWebp';
 import { ViewportContext } from './Common/Context';
 import Scrollbutton from './Main/Scrollbutton';
 import CookieConsentBar from './Main/CookieConsentBar';
 import PrivacyPolicy from './Main/PrivacyPolicy';
 import Error404 from './Main/Error404';
+
+//const MainContainer = lazy(() => import('./Main/MainContainer'));
 
 const App = props => {
   
@@ -16,6 +19,7 @@ const App = props => {
   const [menuItemClicked, setMenuItemClicked] = useState('');
   const [breakpoint, setBreakpoint] = useState('computer');
   const [stackable, setStackable] = useState(false);
+  const [imgExtension, setImgExtension] = useState('');
   const [headerVisible, displayHeader] = useState(false);
   const [loaderVisible, setLoaderToVisible] = useState(true);
   
@@ -54,11 +58,11 @@ const App = props => {
   );
 
   useEffect( () => {
-    if (loaderVisible && activeItem && dataLoaded){
+    if (loaderVisible && activeItem && sectionLoaded.home){
       setLoaderToVisible(false);
 
     } 
-  }, [dataLoaded]); 
+  }, [sectionLoaded]); 
 
   const setContext = () => {
     const screenWidth = document.documentElement.clientWidth;
@@ -86,12 +90,20 @@ const App = props => {
     }
   }
 
+  useEffect( () => {
+    supportsWebp('lossless', setExtension);
+    function setExtension(feature, result) {
+      const extension = result? 'webp' : 'jpg';
+      setImgExtension(extension);
+    }
+  }, []);
+
   const commonProps = { dataLoaded, activeItem, invertedBg, setInvertedBg, menuItemClicked, setMenuItemClicked };
   const naviProps = { ...commonProps, displayHeader };
   const mainProps = { ...commonProps, setSectionLoaded, headerVisible, setActiveItem };
-//local
+
   return (
-    <ViewportContext.Provider value={{stackable, breakpoint}}>
+    <ViewportContext.Provider value={{stackable, breakpoint, imgExtension}}>
 
       { loaderVisible && 
         <Dimmer active inverted>
@@ -100,8 +112,12 @@ const App = props => {
       }
       <Switch>
         <Route exact path="/">
-          <Navigation {...naviProps} />      
-          <MainContainer {...mainProps} />       
+          <Navigation {...naviProps} />
+         {/*  <Suspense fallback={<Dimmer active inverted>
+          <Loader />
+        </Dimmer>}> */}
+            <MainContainer {...mainProps} />
+          {/* </Suspense> */}
           <Scrollbutton activeItem={activeItem} setActiveItem={setActiveItem} />
           { dataLoaded && 
             <CookieConsentBar />
