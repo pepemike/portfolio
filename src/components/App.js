@@ -89,7 +89,7 @@ const App = props => {
   const commonProps = { dataLoaded, activeItem, invertedBg, setInvertedBg, menuItemClicked, setMenuItemClicked };
   const naviProps = { ...commonProps, displayHeader };
   const mainProps = { ...commonProps, setSectionLoaded, headerVisible, setActiveItem };
-
+//local
   return (
     <ViewportContext.Provider value={{stackable, breakpoint}}>
 
