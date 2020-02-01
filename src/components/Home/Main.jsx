@@ -5,7 +5,7 @@ import Button from './Button';
 import Header from './Header';
 import Image from './Image';
 
-const Main = ({ headerVisible, setMenuItemClicked, data, setImgLoaded }) => {
+const Main = ({ headerVisible, setMenuItemClicked, setImgLoaded }) => {
 	const [imgSrc, setImgSrc] = useState('');
 	const [arrowMoving, setArrowMoving] = useState(true);
 	const { stackable, breakpoint } = useContext(ViewportContext);
