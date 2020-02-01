@@ -8,7 +8,7 @@ import Image from './Image';
 const Main = ({ headerVisible, setMenuItemClicked, data}) => {
 	const [imgSrc, setImgSrc] = useState('');
 	const [arrowMoving, setArrowMoving] = useState(true);
-	const { stackable, breakpoint } = useContext(ViewportContext);
+	const { stackable, breakpoint, imgExtension } = useContext(ViewportContext);
 	
 	//move arrow up and down
 	useEffect(() => {	
@@ -26,7 +26,7 @@ const Main = ({ headerVisible, setMenuItemClicked, data}) => {
 		() => {
 			if (data.length === 0) return;
 			const [{imgName}] = data;
-			const img = require(`../../images/${imgName}.jpg`); 			
+			const img = require(`../../images/${imgName}.${imgExtension}`); 
 			setImgSrc(img);			
 		}, [data]
 	);
