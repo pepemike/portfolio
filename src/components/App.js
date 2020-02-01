@@ -55,12 +55,7 @@ const App = props => {
   );
 
   useEffect( () => {
-    if (dataLoaded) console.log('data Loaded')
-  }, [dataLoaded]);
-
-  useEffect( () => {
     if (loaderVisible && activeItem && imgLoaded){
-      console.log('img loaded')
       setLoaderToVisible(false);
     } 
   }, [imgLoaded]); 
