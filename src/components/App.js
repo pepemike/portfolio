@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import { Dimmer, Loader } from 'semantic-ui-react';
 import Navigation from './Navigation/Navigation';
 import MainContainer from './Main/MainContainer';
-import { supportsWebp } from './Common/SupportsWebp';
 import { ViewportContext } from './Common/Context';
 import Scrollbutton from './Main/Scrollbutton';
 import CookieConsentBar from './Main/CookieConsentBar';
@@ -90,20 +89,12 @@ const App = props => {
     }
   }
 
-  useEffect( () => {
-    supportsWebp('lossless', setExtension);
-    function setExtension(feature, result) {
-      const extension = result? 'webp' : 'jpg';
-      setImgExtension(extension);
-    }
-  }, []);
-
   const commonProps = { dataLoaded, activeItem, invertedBg, setInvertedBg, menuItemClicked, setMenuItemClicked };
   const naviProps = { ...commonProps, displayHeader };
   const mainProps = { ...commonProps, setSectionLoaded, headerVisible, setActiveItem };
 
   return (
-    <ViewportContext.Provider value={{stackable, breakpoint, imgExtension}}>
+    <ViewportContext.Provider value={{stackable, breakpoint}}>
 
       { loaderVisible && 
         <Dimmer active inverted>
