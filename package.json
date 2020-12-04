@@ -1,11 +1,10 @@
 {
   "name": "portfolio",
-  "description": "a really cool app",
+  "description": "send mail",
   "version": "1.0.0",
   "engines": {
     "node": "12.16.3"
- }
-}    
+  },    
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
