@@ -1,6 +1,11 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.16.3"
+ }
+}    
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
